@@ -1,0 +1,102 @@
+<!--
++[返回目录]
+
+LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
++[打开](,LaTeX数学记号)
+-->
+
+<html>
+  <head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
+
+
+<script>
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+  switch (event.key) {
+    case "Left": // IE/Edge specific value
+    case "ArrowLeft":
+      window.location="../pages/OTS_theory:_spectrum.html";
+      break;
+    case "Right": // IE/Edge specific value
+    case "ArrowRight":
+      window.location="../pages/Method_of_calculating_OTS_spectrum_2.html";
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
+
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+}, true);
+</script>
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/styleSheet.css">
+  </head>
+
+
+<body>
+<div class="topnav">
+  <a href="../pages/OTS_theory:_spectrum.html">Prev</a>
+  <a href="../index.html">Home</a>
+  <a href="../pages/Method_of_calculating_OTS_spectrum_2.html">Next</a>
+</div>
+
+
+<div class="content">
+    <p><mathjax style=\"font-size:1.5em\">
+
+<h1>OTS theory: n_e(k,w)</h1>
+Initial equations,<br>
+
+$$
+\frac{\partial F_{1q}}{\partial t}+\vec{v}\cdot \frac{\partial F_{1q}}{\partial \vec{r}}+\frac{q}{m} \vec{E}_{1}\cdot \frac{\partial F_{0q}}{\partial \vec{v}}=C
+\tag{5}
+$$
+
+$$
+\vec{\nabla}\cdot \vec{E}_{1}=4 \pi \sum_{i}{\left(q_{i} \int_{}^{}{d\vec{v}\ }{F_{1, i}}\right)}
+\tag{6}
+$$
+
+Finial output,<br>
+
+$$
+n_{1e} \left( k,\omega \right)=\frac{\left(1-\chi_{i} \left( k,\omega \right)\right) \int_{}^{}{dv\ }{\frac{F_{1et} \left( k,v,0 \right)}{\vec{v}\cdot i \vec{k}-i \omega}}-Z \chi_{e} \left( k,\omega \right) \int_{}^{}{dv\ }{\frac{F_{1it} \left( k,v,0 \right)}{\vec{v}\cdot i \vec{k}-i \omega}}}{1-\chi_{e} \left( k,\omega \right)-\chi_{i} \left( k,\omega \right)}
+\tag{7}
+$$
+
+
+$$
+\chi_{e} \left( k,\omega \right)=\left(\int_{}^{}{dv\ }{\frac{\frac{\partial}{\partial v_{k}}\left(f_{e} \left( v \right)\right)}{\vec{v}\cdot i \vec{k}-i \omega}}\right) N_{0e} \frac{e^{2}}{m_{e}} \frac{4 i \pi}{k}
+\tag{8}
+$$
+
+
+$$
+\chi_{i} \left( k,\omega \right)=\left(\int_{}^{}{dv\ }{\frac{\frac{\partial}{\partial v_{k}}\left(f_{i} \left( v \right)\right)}{\vec{v}\cdot i \vec{k}-i \omega}}\right) N_{0i} \frac{\left(Z e\right)^{2}}{m_{i}} \frac{4 i \pi}{k}
+\tag{9}
+$$
+
+
+
+
+    </mathjax></p>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>

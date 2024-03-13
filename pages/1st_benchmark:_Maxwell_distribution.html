@@ -1,0 +1,88 @@
+<!--
++[返回目录]
+
+LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
++[打开](,LaTeX数学记号)
+-->
+
+<html>
+  <head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
+
+
+<script>
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+  switch (event.key) {
+    case "Left": // IE/Edge specific value
+    case "ArrowLeft":
+      window.location="../pages/Method_of_calculating_OTS_spectrum_2.html";
+      break;
+    case "Right": // IE/Edge specific value
+    case "ArrowRight":
+      window.location="../pages/2nd_benchmark:_super-Gaussian_distribution.html";
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
+
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+}, true);
+</script>
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/styleSheet.css">
+  </head>
+
+
+<body>
+<div class="topnav">
+  <a href="../pages/Method_of_calculating_OTS_spectrum_2.html">Prev</a>
+  <a href="../index.html">Home</a>
+  <a href="../pages/2nd_benchmark:_super-Gaussian_distribution.html">Next</a>
+</div>
+
+
+<div class="content">
+    <p><mathjax style=\"font-size:1.5em\">
+
+<h1>1st benchmark: Maxwell distribution</h1>
+We can derive w(x) in this form,<br>
+
+$$
+w \left( x \right)=\int_{0}^{\infty}{dp\ }{g \left( p \right) \left(2 p^{2}+p x log \left( \frac{x-p}{x+p} \right)\right)}
+\tag{10}
+$$
+
+Comparing to Zhao's w(x),<br>
+
+$$
+w \left( x \right)=1-2 x e^{-x^{2}} \int_{0}^{x}{dp\ }{e^{p^{2}}}+i \sqrt{\pi} x e^{-x^{2}}
+\tag{a7}
+$$
+
+The shape of the w(x) can be compared directly,<br>
+<img src="../res/w.png.png" width="95%"><br>
+
+
+
+
+    </mathjax></p>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>

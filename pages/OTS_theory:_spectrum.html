@@ -1,0 +1,97 @@
+<!--
++[返回目录]
+
+LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
++[打开](,LaTeX数学记号)
+-->
+
+<html>
+  <head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
+
+
+<script>
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+  switch (event.key) {
+    case "Left": // IE/Edge specific value
+    case "ArrowLeft":
+      window.location="../pages/Method_of_calculating_OTS_spectrum.html";
+      break;
+    case "Right": // IE/Edge specific value
+    case "ArrowRight":
+      window.location="../pages/OTS_theory:_n_e(k,w).html";
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
+
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+}, true);
+</script>
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/styleSheet.css">
+  </head>
+
+
+<body>
+<div class="topnav">
+  <a href="../pages/Method_of_calculating_OTS_spectrum.html">Prev</a>
+  <a href="../index.html">Home</a>
+  <a href="../pages/OTS_theory:_n_e(k,w).html">Next</a>
+</div>
+
+
+<div class="content">
+    <p><mathjax style=\"font-size:1.5em\">
+
+<h1>OTS theory: spectrum</h1>
+Initial equations,<br>
+
+$$
+\frac{d\vec{\beta}}{dt}=-\frac{e \vec{E}_{i0}}{m_{e} c} cos \left( \vec{k}_{0}\cdot \vec{r}-\omega_{0} t \right)
+\tag{1}
+$$
+
+
+$$
+\vec{E}_{t} \left( \vec{R},\omega \right)=\int_{-\infty}^{\infty}{dt\ }{\left(\int_{}^{}{dr\ }{\int_{}^{}{dv\ }{\left(-F_{e} \left( \vec{r},\vec{v},t \right) \frac{e}{c R} \left(\hat{s}\times \left(\hat{s}\times \frac{d\vec{\beta}}{dt}\right)\right)\right)}}\right) exp \left( -i \omega t \right)}
+\tag{2}
+$$
+
+Radiation power,<br>
+
+$$
+\vec{E}_{t} \left( \hat{k},\omega \right)=\frac{1}{2} \frac{e^{2}}{m_{e} c^{2} R} \left(\hat{s}\times \left(\hat{s}\times \vec{E}_{i0}\right)\right) n_{e} \left( \vec{k}_{0}-\frac{\hat{s}}{c} \left(\omega-\omega_{0}\right),\omega-\omega_{0} \right)
+\tag{3}
+$$
+
+
+$$
+P_{s} \left( \hat{k},\omega_{s} \right) d\Omega d\omega_{s}=\frac{1}{16 \pi^{2}} \frac{e^{4}}{m_{e}^{2} c^{3}} d\Omega d\omega_{s} \left|\hat{s}\times \left(\hat{s}\times \vec{E}_{i0}\right)\right|^{2} \frac{1}{T} \left|n_{e} \left( \vec{k}_{0}-\frac{\hat{s}}{c} \left(\omega-\omega_{0}\right),\omega-\omega_{0} \right)\right|^{2}
+\tag{4}
+$$
+
+
+
+
+    </mathjax></p>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>
