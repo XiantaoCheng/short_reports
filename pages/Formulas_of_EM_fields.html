@@ -22,11 +22,11 @@ window.addEventListener("keydown", function (event) {
   switch (event.key) {
     case "Left": // IE/Edge specific value
     case "ArrowLeft":
-      window.location="../pages/1st_benchmark:_Maxwell_distribution.html";
+      window.location="../pages/title.html";
       break;
     case "Right": // IE/Edge specific value
     case "ArrowRight":
-      window.location="../pages/title.html";
+      window.location="../pages/Circular_motion.html";
       break;
     default:
       return; // Quit when this doesn't handle the key event.
@@ -47,35 +47,41 @@ window.addEventListener("keydown", function (event) {
 
 <body>
 <div class="topnav">
-  <a href="../pages/1st_benchmark:_Maxwell_distribution.html">Prev</a>
+  <a href="../pages/title.html">Prev</a>
   <a href="../index.html">Home</a>
-  <a href="../pages/title.html">Next</a>
+  <a href="../pages/Circular_motion.html">Next</a>
 </div>
 
 
 <div class="content">
     <p><mathjax style=\"font-size:1.5em\">
 
-<h1>2nd benchmark: super-Gaussian distribution</h1>
-We can derive w(x) in this form,<br>
+<h1>Formulas of EM fields</h1>
+Potential fields,<br>
 
 $$
-w \left( x \right)=\int_{0}^{\infty}{dp\ }{g_{P} \left( p \right) p^{2 P-2} \left(2 p^{2}+p x log \left( \frac{x-p}{x+p} \right)\right)}
-\tag{11}
+\phi \left( t,\vec{r} \right)=\frac{1}{4 \pi \epsilon_{0}} \frac{-e}{\left(1-\hat{R} \left( t_{ret} \right)\cdot \vec{\beta} \left( t_{ret} \right)\right) \left|\vec{r}-\vec{r}_{0} \left( t_{ret} \right)\right|}
+\tag{1}
 $$
 
-and \(g_P(x)\) is,<br>
 
 $$
-g_{P} \left( x \right)=A e^{-x^{2 P}}
-\tag{12}
+\vec{A} \left( t,\vec{r} \right)=\frac{\mu_{0}}{4 \pi} \frac{-e \vec{v} \left( t_{ret} \right)}{\left(1-\hat{R} \left( t_{ret} \right)\cdot \vec{\beta} \left( t_{ret} \right)\right) \left|\vec{r}-\vec{r}_{0} \left( t_{ret} \right)\right|}
+\tag{2}
 $$
 
-The OTS spectrums are,<br>
-The shape of the w(x) can be compared directly,<br>
-<img src="../res/super_gaussian.png.png" width="95%"><br>
+EM fields,<br>
 
-<img src="../res/OTS.png.png" width="95%"><br>
+$$
+\vec{E}=\frac{-e}{4 \pi \epsilon_{0}} \frac{\hat{R}-\vec{\beta}}{\gamma^{2} \left(1-\hat{R}\cdot \vec{\beta}\right)^{3} R^{2}}+\frac{-e/c}{4 \pi \epsilon_{0}} \frac{\hat{R}\times \left(\left(\hat{R}-\vec{\beta}\right)\times \frac{d\vec{\beta}}{dt}\right)}{\left(1-\hat{R}\cdot \vec{\beta}\right)^{3} R}
+\tag{3}
+$$
+
+
+$$
+\vec{B}=\hat{R}\times \vec{E}
+\tag{4}
+$$
 
 
 
