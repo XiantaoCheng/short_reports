@@ -9,6 +9,9 @@ LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
   <head>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
 
 
 <script>
@@ -19,11 +22,11 @@ window.addEventListener("keydown", function (event) {
   switch (event.key) {
     case "Left": // IE/Edge specific value
     case "ArrowLeft":
-      window.location="../pages/Scanning_plasma_temperature.html";
+      window.location="../pages/Number_per_cell.html";
       break;
     case "Right": // IE/Edge specific value
     case "ArrowRight":
-      window.location="../pages/Simulation_parameters.html";
+      window.location="../pages/Scanning_plasma_temperature.html";
       break;
     default:
       return; // Quit when this doesn't handle the key event.
@@ -44,15 +47,36 @@ window.addEventListener("keydown", function (event) {
 
 <body>
 <div class="topnav">
-  <a href="../pages/Scanning_plasma_temperature.html">Prev</a>
+  <a href="../pages/Number_per_cell.html">Prev</a>
   <a href="../index.html">Home</a>
-  <a href="../pages/Simulation_parameters.html">Next</a>
+  <a href="../pages/Scanning_plasma_temperature.html">Next</a>
 </div>
 
 
 <div class="content">
     <p><mathjax style=\"font-size:1.5em\">
-<h1>1D PIC simulations of SRS</h1>
+
+<h1>Scanning number density</h1>
+PIC simulations were run by Smilei. Parameters were,<br>
+$$<br>
+\lambda_{laser}=351 nm,\ T_{e}=3 keV<br>
+$$<br>
+\(\rho_{e}=0.5 \times 10^{21} cm^{-3}\)<br>
+<img src="../res/fig2_n5e26.gif.gif" width="95%"><br>
+
+\(\rho_{e}=2 \times 10^{21} cm^{-3}\)<br>
+<img src="../res/fig2_n2e27.gif.gif" width="95%"><br>
+
+\(\rho_{e}=3 \times 10^{21} cm^{-3}\)<br>
+<img src="../res/fig2_n3e27.gif.gif" width="95%"><br>
+
+\(\rho_{e}=4 \times 10^{21} cm^{-3}\)<br>
+<img src="../res/fig2_n4e27.gif.gif" width="95%"><br>
+
+\(\rho_{e}=5 \times 10^{21} cm^{-3}\)<br>
+
+
+
     </mathjax></p>
 </div>
 
@@ -62,6 +86,3 @@ window.addEventListener("keydown", function (event) {
 
 </body>
 </html>
-
-
-
