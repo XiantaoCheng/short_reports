@@ -9,6 +9,9 @@ LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
   <head>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
 
 
 <script>
@@ -19,11 +22,11 @@ window.addEventListener("keydown", function (event) {
   switch (event.key) {
     case "Left": // IE/Edge specific value
     case "ArrowLeft":
-      window.location="../pages/Road_map.html";
+      window.location="../pages/Velocity_distributions.html";
       break;
     case "Right": // IE/Edge specific value
     case "ArrowRight":
-      window.location="../pages/Linearization_equations.html";
+      window.location="../pages/title.html";
       break;
     default:
       return; // Quit when this doesn't handle the key event.
@@ -44,15 +47,24 @@ window.addEventListener("keydown", function (event) {
 
 <body>
 <div class="topnav">
-  <a href="../pages/Road_map.html">Prev</a>
+  <a href="../pages/Velocity_distributions.html">Prev</a>
   <a href="../index.html">Home</a>
-  <a href="../pages/Linearization_equations.html">Next</a>
+  <a href="../pages/title.html">Next</a>
 </div>
 
 
 <div class="content">
     <p><mathjax style=\"font-size:1.5em\">
-<h1>Analysis of 1D SRS</h1>
+
+<h1>Road map</h1>
+1.研究OTS能否诊断出SRS中的空间分布和速度分布特征. 利用1D模拟结果和理想情形, 建立理论模型; <br>
+2.建立快速正向模拟的手段. 包括2D等离子体模拟(GPU-based PIC/PM simluations)和OTS模拟的手段; <br>
+3.建立理论描述等离子体中的关键参数和OTS光谱特征之间的关系. 研究逆向求解诊断结果的算法; <br>
+4.计算实验需要的参数, 设计实验平台和提出实验方案; <br>
+5.用1D模拟的结果测试机器学习在等离子体重建中的效果. <br>
+
+
+
     </mathjax></p>
 </div>
 
@@ -62,6 +74,3 @@ window.addEventListener("keydown", function (event) {
 
 </body>
 </html>
-
-
-

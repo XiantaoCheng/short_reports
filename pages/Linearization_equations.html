@@ -1,0 +1,128 @@
+<!--
++[返回目录]
+
+LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
++[打开](,LaTeX数学记号)
+-->
+
+<html>
+  <head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
+
+
+<script>
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+  switch (event.key) {
+    case "Left": // IE/Edge specific value
+    case "ArrowLeft":
+      window.location="../pages/title.html";
+      break;
+    case "Right": // IE/Edge specific value
+    case "ArrowRight":
+      window.location="../pages/Roots_of_linearization_equations.html";
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
+
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+}, true);
+</script>
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/styleSheet.css">
+  </head>
+
+
+<body>
+<div class="topnav">
+  <a href="../pages/title.html">Prev</a>
+  <a href="../index.html">Home</a>
+  <a href="../pages/Roots_of_linearization_equations.html">Next</a>
+</div>
+
+
+<div class="content">
+    <p><mathjax style=\"font-size:1.5em\">
+
+<h1>Linearization equations</h1>
+The 1D equations are,<br>
+
+$$
+\left(\frac{\partial^{2}}{\partial t ^{2}}+\omega_{p}^{2}+\nu_{e} \frac{\partial }{\partial t}-3 v_{B}^{2} \frac{\partial^{2}}{\partial x ^{2}}\right) n_{1}=\epsilon_{0} \omega_{p}^{2} \frac{\partial^{2}}{\partial x ^{2}} \left(A_{0} A_{1}\right)
+\tag{1}
+$$
+
+
+$$
+\left(\frac{\partial^{2}}{\partial t ^{2}}+\omega_{p}^{2}-c^{2} \frac{\partial^{2}}{\partial x ^{2}}\right) A_{1}=-\frac{\omega_{p}^{2}}{n_{0}} n_{1} A_{0}
+\tag{2}
+$$
+The plasma density wave, \(\omega\) and k, should satisfy conditions,<br>
+
+$$
+\omega_{0}=\omega_{1}+\omega
+\tag{3}
+$$
+
+
+$$
+k_{0}=k_{1}+k
+\tag{4}
+$$
+
+Equations (1) and (2) will become,<br>
+
+$$
+\left(-\omega^{2}+\omega_{p}^{2}-i \nu_{e} \omega+3 v_{B}^{2} k^{2}\right) n_{1}=-\epsilon_{0} \omega_{p}^{2} k^{2} \left(A_{0} A_{1}\right)
+\tag{5}
+$$
+
+
+$$
+\left(-\omega_{1}^{2}+\omega_{p}^{2}+c^{2} k_{1}^{2}\right) A_{1}=-\frac{\omega_{p}^{2}}{n_{0}} n_{1} A_{0}
+\tag{6}
+$$
+
+By combining them, we will get,<br>
+
+$$
+\left(\omega-\omega_{1}\right) \left(\omega-\omega_{2}\right) \left(\omega-\omega_{3}\right) \left(\omega-\omega_{4}\right)=c^{2} k^{2} \omega_{p}^{2} a_{0}^{2}
+\tag{7}
+$$
+where,<br>
+
+$$
+\omega_{1,2}=\omega_{0}\pm \sqrt{\omega_{p}^{2}+c^{2} \left(k_{0}-k\right)^{2}}
+\tag{8}
+$$
+
+
+$$
+\omega_{3,4}=-\frac{i \nu_{e}\pm \sqrt{-\nu_{e}^{2}+4 \left(\omega_{p}^{2}+3 v_{B}^{2} k^{2}\right)}}{2}
+\tag{9}
+$$
+
+
+
+
+    </mathjax></p>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>

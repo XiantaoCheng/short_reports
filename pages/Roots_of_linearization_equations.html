@@ -9,6 +9,9 @@ LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
   <head>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
 
 
 <script>
@@ -19,11 +22,11 @@ window.addEventListener("keydown", function (event) {
   switch (event.key) {
     case "Left": // IE/Edge specific value
     case "ArrowLeft":
-      window.location="../pages/Road_map.html";
+      window.location="../pages/Linearization_equations.html";
       break;
     case "Right": // IE/Edge specific value
     case "ArrowRight":
-      window.location="../pages/Linearization_equations.html";
+      window.location="../pages/Comparing_density_distribution_with_PIC_simultions.html";
       break;
     default:
       return; // Quit when this doesn't handle the key event.
@@ -44,15 +47,42 @@ window.addEventListener("keydown", function (event) {
 
 <body>
 <div class="topnav">
-  <a href="../pages/Road_map.html">Prev</a>
+  <a href="../pages/Linearization_equations.html">Prev</a>
   <a href="../index.html">Home</a>
-  <a href="../pages/Linearization_equations.html">Next</a>
+  <a href="../pages/Comparing_density_distribution_with_PIC_simultions.html">Next</a>
 </div>
 
 
 <div class="content">
     <p><mathjax style=\"font-size:1.5em\">
-<h1>Analysis of 1D SRS</h1>
+
+<h1>Roots of linearization equations</h1>
+Equations are,<br>
+
+$$
+\left(\omega-\omega_{1}\right) \left(\omega-\omega_{2}\right) \left(\omega-\omega_{3}\right) \left(\omega-\omega_{4}\right)=c^{2} k^{2} \omega_{p}^{2} a_{0}^{2}
+\tag{7}
+$$
+where,<br>
+
+$$
+\omega_{1,2}=\omega_{0}\pm \sqrt{\omega_{p}^{2}+c^{2} \left(k_{0}-k\right)^{2}}
+\tag{8}
+$$
+
+
+$$
+\omega_{3,4}=-\frac{i \nu_{e}\pm \sqrt{-\nu_{e}^{2}+4 \left(\omega_{p}^{2}+3 v_{B}^{2} k^{2}\right)}}{2}
+\tag{9}
+$$
+
+<img src="../res/fig1.png.png" width="95%"><br>
+
+<img src="../res/fig1b.png.png" width="95%"><br>
+
+
+
+
     </mathjax></p>
 </div>
 
@@ -62,6 +92,3 @@ window.addEventListener("keydown", function (event) {
 
 </body>
 </html>
-
-
-
