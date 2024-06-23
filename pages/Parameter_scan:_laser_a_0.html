@@ -9,6 +9,9 @@ LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
   <head>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
 
 
 <script>
@@ -19,11 +22,11 @@ window.addEventListener("keydown", function (event) {
   switch (event.key) {
     case "Left": // IE/Edge specific value
     case "ArrowLeft":
-      window.location="../pages/PIC_simulation_parameters.html";
+      window.location="../pages/Parameter_scan:_laser_waist.html";
       break;
     case "Right": // IE/Edge specific value
     case "ArrowRight":
-      window.location="../pages/Animation_of_simulations.html";
+      window.location="../pages/PIC_simulation_parameters.html";
       break;
     default:
       return; // Quit when this doesn't handle the key event.
@@ -44,15 +47,30 @@ window.addEventListener("keydown", function (event) {
 
 <body>
 <div class="topnav">
-  <a href="../pages/PIC_simulation_parameters.html">Prev</a>
+  <a href="../pages/Parameter_scan:_laser_waist.html">Prev</a>
   <a href="../index.html">Home</a>
-  <a href="../pages/Animation_of_simulations.html">Next</a>
+  <a href="../pages/PIC_simulation_parameters.html">Next</a>
 </div>
 
 
 <div class="content">
     <p><mathjax style=\"font-size:1.5em\">
-<h1>SRS 2D PIC simulations</h1>
+
+<h1>Parameter scan: laser a_0</h1>
+$$<br>
+\lambda=351\ nm,\ n_e=\ 1.1583\times 10^{21}\ cm^{-3}, T=0\ keV<br>
+$$<br>
+<img src="../res/fig6a.png.png" width="95%"><br>
+
+<img src="../res/fig6b.png.png" width="95%"><br>
+
+<img src="../res/fig6c.png.png" width="95%"><br>
+
+<img src="../res/fig6d.png.png" width="95%"><br>
+
+
+
+
     </mathjax></p>
 </div>
 
@@ -62,6 +80,3 @@ window.addEventListener("keydown", function (event) {
 
 </body>
 </html>
-
-
-

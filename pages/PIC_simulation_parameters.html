@@ -9,6 +9,9 @@ LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
   <head>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
 
 
 <script>
@@ -19,11 +22,11 @@ window.addEventListener("keydown", function (event) {
   switch (event.key) {
     case "Left": // IE/Edge specific value
     case "ArrowLeft":
-      window.location="../pages/PIC_simulation_parameters.html";
+      window.location="../pages/Parameter_scan:_laser_a_0.html";
       break;
     case "Right": // IE/Edge specific value
     case "ArrowRight":
-      window.location="../pages/Animation_of_simulations.html";
+      window.location="../pages/title.html";
       break;
     default:
       return; // Quit when this doesn't handle the key event.
@@ -44,15 +47,25 @@ window.addEventListener("keydown", function (event) {
 
 <body>
 <div class="topnav">
-  <a href="../pages/PIC_simulation_parameters.html">Prev</a>
+  <a href="../pages/Parameter_scan:_laser_a_0.html">Prev</a>
   <a href="../index.html">Home</a>
-  <a href="../pages/Animation_of_simulations.html">Next</a>
+  <a href="../pages/title.html">Next</a>
 </div>
 
 
 <div class="content">
     <p><mathjax style=\"font-size:1.5em\">
-<h1>SRS 2D PIC simulations</h1>
+
+<h1>PIC simulation parameters</h1>
+Software: PIConGPU(https://picongpu.readthedocs.io/en/latest)<br>
+Grid: 800 x 5500 (4,400,000)<br>
+Particles: 64 per cell<br>
+Time steps: 41,971 (980 fs) <br>
+Device: A100 x 1<br>
+Computation time: 30 min<br>
+
+
+
     </mathjax></p>
 </div>
 
@@ -62,6 +75,3 @@ window.addEventListener("keydown", function (event) {
 
 </body>
 </html>
-
-
-
