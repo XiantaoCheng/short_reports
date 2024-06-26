@@ -1,0 +1,149 @@
+<!--
++[返回目录]
+
+LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
++[打开](,LaTeX数学记号)
+-->
+
+<html>
+  <head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
+
+
+<script>
+window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+  switch (event.key) {
+    case "Left": // IE/Edge specific value
+    case "ArrowLeft":
+      window.location="../pages/title.html";
+      break;
+    case "Right": // IE/Edge specific value
+    case "ArrowRight":
+      window.location="../pages/Results_1.html";
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
+
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+}, true);
+</script>
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../css/styleSheet.css">
+  </head>
+
+
+<body>
+<div class="topnav">
+  <a href="../pages/title.html">Prev</a>
+  <a href="../index.html">Home</a>
+  <a href="../pages/Results_1.html">Next</a>
+</div>
+
+
+<div class="content">
+    <p><mathjax style=\"font-size:1.5em\">
+
+<h1>Equation and solution</h1>
+The transport equation is,<br>
+
+$$
+\frac{\partial}{\partial z}\left(f \left( \theta,z \right)\right)=-N f \left( \theta,z \right) \int_{}^{}{d\chi\ }{\sigma \left( \chi \right) sin \left( \chi \right)}+N \int_{}^{}{d\chi\ }{f \left( \theta-\chi,z \right) \sigma \left( \chi \right) sin \left( \chi \right)}
+\tag{1}
+$$
+
+We can take the approximation, \(sin(\chi)\approx \chi\), which will make eqn.(1) become,<br>
+
+$$
+\frac{\partial}{\partial z}\left(f \left( \theta,z \right)\right)=-N f \left( \theta,z \right) \int_{}^{}{d\chi\ }{\sigma \left( \chi \right) \chi}+N \int_{}^{}{d\chi\ }{f \left( \theta-\chi,z \right) \sigma \left( \chi \right) \chi}
+\tag{2}
+$$
+
+In the case of Coulomb scattering, the differential cross section is,<br>
+
+$$
+\sigma \left( \chi \right)\approx \frac{Z^{2} e^{4}}{16 \pi^{2} \epsilon_{0}^{2} E_{0}^{2}} \frac{1}{\chi^{4}}
+\tag{3}
+$$
+
+The solution is,<br>
+
+$$
+g \left( \eta,z \right)=e^{-\Omega \left( \eta \right) z+\Omega_{0}}
+\tag{4}
+$$
+
+
+$$
+f \left( \theta,z \right)=\int_{}^{}{d\eta\ }{g \left( \eta,z \right) e^{i \eta \theta}}
+\tag{5}
+$$
+
+
+$$
+\Omega \left( \eta \right)\approx \frac{N Z^{2} e^{4}}{8 \pi^{2} \epsilon_{0}^{2} E_{0}^{2}} \left(\frac{3}{4} \eta^{2}+\frac{\eta^{2}}{2} Ci \left( \eta \chi_{0} \right)+\frac{i \eta}{\chi_{0}}-\frac{i \eta^{2} \pi}{4}\right)
+\tag{6}
+$$
+
+
+$$
+\chi_{0}=\frac{Z e^{2}}{4 \pi \epsilon_{0}} \frac{1}{E_{0}} \frac{1}{r_{0}}
+\tag{7}
+$$
+
+
+$$
+Ci \left( x \right)=\gamma+ln \left( x \right)+\sum_{n=1}^{\infty}{\frac{\left(-1\right)^{n} x^{2 n}}{2 n \Gamma \left( 2 n+1 \right)}}
+\tag{8}
+$$
+
+where \(\gamma\approx 0.5772156649...\), which is Euler-Mascheroni constant. <br>
+It is not a Gaussian function, but it is closed to,<br>
+
+$$
+f \left( \theta \right)=A exp \left( -\frac{\theta^{2}}{\Delta \theta^{2}} \right)
+\tag{9}
+$$
+
+
+$$
+\Delta \theta=2 \sqrt{\frac{b^{2}+c^{2}}{b}}
+\tag{10}
+$$
+
+
+$$
+b=\frac{N Z^{2} e^{4}}{8 \pi^{2} \epsilon_{0}^{2} E_{0}^{2}} \left(\frac{3}{4}+\frac{1}{2} Ci \left( \eta \chi_{0} \right)\right) z\approx \frac{N Z^{2} e^{4}}{8 \pi^{2} \epsilon_{0}^{2} E_{0}^{2}} \left(\frac{3}{4}+\frac{1}{2} Ci \left( 0.1 \chi_{0} \right)\right) z
+\tag{11}
+$$
+
+
+$$
+c=\frac{\pi}{4} \frac{N Z^{2} e^{4}}{8 \pi^{2} \epsilon_{0}^{2} E_{0}^{2}} z
+\tag{12}
+$$
+
+
+
+
+    </mathjax></p>
+</div>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+</body>
+</html>
