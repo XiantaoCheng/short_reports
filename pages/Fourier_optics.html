@@ -9,6 +9,9 @@ LaTeX数学记号::https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
   <head>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://stemkoski.github.io/Three.js/js/Three.js"></script>
+<script src="../js/OrbitControls.js"></script>
+<script type="text/javascript" src="../js/threeWorld.js"></script>
 
 
 <script>
@@ -19,11 +22,11 @@ window.addEventListener("keydown", function (event) {
   switch (event.key) {
     case "Left": // IE/Edge specific value
     case "ArrowLeft":
-      window.location="../pages/Xray_stimulated_electrons.html";
+      window.location="../pages/Currents_and_magneta.html";
       break;
     case "Right": // IE/Edge specific value
     case "ArrowRight":
-      window.location="../pages/Currents_and_magneta.html";
+      window.location="../pages/Xray_stimulated_electrons.html";
       break;
     default:
       return; // Quit when this doesn't handle the key event.
@@ -44,15 +47,21 @@ window.addEventListener("keydown", function (event) {
 
 <body>
 <div class="topnav">
-  <a href="../pages/Xray_stimulated_electrons.html">Prev</a>
+  <a href="../pages/Currents_and_magneta.html">Prev</a>
   <a href="../index.html">Home</a>
-  <a href="../pages/Currents_and_magneta.html">Next</a>
+  <a href="../pages/Xray_stimulated_electrons.html">Next</a>
 </div>
 
 
 <div class="content">
     <p><mathjax style=\"font-size:1.5em\">
-<h1>Surface magnetic field</h1>
+
+<h1>Fourier optics</h1>
+<img src="../res/fig2.png.png" width="95%"><br>
+
+
+
+
     </mathjax></p>
 </div>
 
@@ -62,6 +71,3 @@ window.addEventListener("keydown", function (event) {
 
 </body>
 </html>
-
-
-
